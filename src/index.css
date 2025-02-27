@@ -15,3 +15,23 @@ body,html{
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
+
+  .video-no-controls::-webkit-media-controls {
+    display: none !important;
+}
+
+.video-no-controls::-moz-media-controls {
+    display: none !important;
+}
+
+.video-no-controls::-ms-media-controls {
+    display: none !important;
+}
+
+.video-no-controls::-o-media-controls {
+    display: none !important;
+}
+
+.video-no-controls {
+    pointer-events: none;
+}

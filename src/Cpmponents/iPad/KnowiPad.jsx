@@ -56,7 +56,7 @@ export default class KnowiPad extends Component {
     };
     render() {
         return (
-            <div>
+            <div className='p-10'>
                 <div className="font-bold text-5xl p-10 text-left">
                     <h1>Get to know iPad.</h1>
                 </div>
