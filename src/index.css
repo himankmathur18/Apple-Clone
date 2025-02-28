@@ -2,36 +2,42 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-body,html{
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-  }
-  
-  .fade-in {
-    animation: fadeIn 2s ease-in-out;
-  }
-  
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+body,
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
 
-  .video-no-controls::-webkit-media-controls {
-    display: none !important;
+  100% {
+    opacity: 1;
+  }
+}
+
+.video-no-controls::-webkit-media-controls {
+  display: none !important;
 }
 
 .video-no-controls::-moz-media-controls {
-    display: none !important;
+  display: none !important;
 }
 
 .video-no-controls::-ms-media-controls {
-    display: none !important;
+  display: none !important;
 }
 
 .video-no-controls::-o-media-controls {
-    display: none !important;
+  display: none !important;
 }
 
 .video-no-controls {
-    pointer-events: none;
+  pointer-events: none;
 }

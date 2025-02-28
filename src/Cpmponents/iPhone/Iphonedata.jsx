@@ -24,12 +24,12 @@ export default class Iphonedata extends Component {
     render() {
         return (
             <div>
-                <div className='flex p-14'>
+                <div className='flex m-10'>
                     <p className='font-bold text-7xl '>iPhone</p>
                     <p className='Font-bold text-5xl ml-[28rem]'>Designed to be loved.</p>
                 </div>
                 <div>
-                    <video ref={this.videoRef} className="p-5 rounded-xl video-no-controls" loop autoPlay muted>
+                    <video ref={this.videoRef} className="p-6 rounded-2xl video-no-controls" loop autoPlay muted>
                         <source src="https://www.apple.com/105/media/ww/iphone/family/2025/e7ff365a-cb59-4ce9-9cdf-4cb965455b69/anim/welcome3/large_2x.mp4" type="video/mp4" />
                     </video>
                 </div>
