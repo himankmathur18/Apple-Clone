@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import Storeapp from "./Storeapp";
 
 const cardData = [
@@ -35,29 +36,31 @@ const cardData = [
         textColor: "text-black",
         textClass: "text-black"
     }
-]; 
+];
 
-const HelpSection = () => {
-    return (
-        <div>
-            <div className="bg-gray-100 py-10 px-5 flex flex-col">
-                <h2 className="text-2xl font-bold text-left p-10">
-                    Help is here. <span className="font-bold text-gray-500">Whenever and however you need it.</span>
-                </h2>
-                <div className="flex gap-6 max-w-6xl w-full overflow-x-auto">
-                    {cardData.map((card, index) => (
-                        <div key={index} className={`${card.bgColor} rounded-2xl shadow-md p-6 flex flex-col items-center text-center min-w-[300px]`}>
-                            <span className={`text-sm uppercase ${card.textColor} font-medium`}>{card.title}</span>
-                            <h3 className={`text-xl font-semibold my-2 ${card.textClass}`}>{card.description}</h3>
-                            {card.additionalText && <p className={card.textClass}>{card.additionalText}</p>}
-                            <img width="500" height="500" alt="" src={card.imgSrc} className="rf-ccard-img-full" />
-                        </div>
-                    ))}
+class HelpSection extends Component {
+    render() {
+        return (
+            <div>
+                <div className="bg-gray-100 py-10 px-5 flex flex-col">
+                    <h2 className="text-2xl font-bold text-left p-10">
+                        Help is here. <span className="font-bold text-gray-500">Whenever and however you need it.</span>
+                    </h2>
+                    <div className="flex gap-6 max-w-6xl w-full overflow-x-auto">
+                        {cardData.map((card, index) => (
+                            <div key={index} className={`${card.bgColor} rounded-2xl shadow-md p-6 flex flex-col items-center text-center min-w-[300px]`}>
+                                <span className={`text-sm uppercase ${card.textColor} font-medium`}>{card.title}</span>
+                                <h3 className={`text-xl font-semibold my-2 ${card.textClass}`}>{card.description}</h3>
+                                {card.additionalText && <p className={card.textClass}>{card.additionalText}</p>}
+                                <img width="500" height="500" alt="" src={card.imgSrc} className="rf-ccard-img-full" />
+                            </div>
+                        ))}
+                    </div>
                 </div>
+                <Storeapp />
             </div>
-            <Storeapp />
-        </div>
-    );
-};
+        );
+    }
+}
 
-export default HelpSection;
+export default HelpSection; 

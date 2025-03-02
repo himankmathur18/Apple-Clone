@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 const cardData = [
   {
@@ -155,22 +155,23 @@ const cardData = [
     imgHeight: 500,
     textAlign: "text-left"
   },
-
 ];
 
-const Latestproductcard = () => {
-  return (
-    <div className="flex gap-6 max-w-6xl w-full overflow-x-auto">
-      {cardData.map((card, index) => (
-        <div key={index} className={`${card.bgColor} rounded-2xl shadow-md p-6 flex flex-col items-center min-w-[300px]`}>
-          {card.title && <h3 className={`text-xl font-semibold my-2 ${card.textAlign}`}>{card.title}</h3>}
-          {card.subtitle && <p className={`text-xl font-semibold my-2 ${card.textAlign}`}>{card.subtitle}</p>}
-          {card.price && <span className={`text-sm uppercase text-gray-500 font-medium ${card.textAlign}`}>{card.price}</span>}
-          <img width={card.imgWidth} height={card.imgHeight} alt="" src={card.imgSrc} className="rf-ccard-img-full" />
-        </div>
-      ))}
-    </div>
-  );
-};
+class Latestproductcard extends Component {
+  render() {
+    return (
+      <div className="flex gap-4 max-w-6xl w-full overflow-x-auto">
+        {cardData.map((card, index) => (
+          <div key={index} className={`${card.bgColor} rounded-2xl shadow-md p-6 flex flex-col items-center min-w-[300px]`}>
+            {card.title && <h3 className={`text-xl font-semibold my-2 ${card.textAlign}`}>{card.title}</h3>}
+            {card.subtitle && <p className={`text-xl font-semibold my-2 ${card.textAlign}`}>{card.subtitle}</p>}
+            {card.price && <span className={`text-sm uppercase text-gray-500 font-medium ${card.textAlign}`}>{card.price}</span>}
+            <img width={card.imgWidth} height={card.imgHeight} alt="" src={card.imgSrc} className="rf-ccard-img-full" />
+          </div>
+        ))}
+      </div>
+    );
+  }
+}
 
 export default Latestproductcard;

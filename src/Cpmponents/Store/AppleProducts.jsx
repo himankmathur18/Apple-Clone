@@ -1,5 +1,4 @@
-// import React from "react";
-
+import React, { Component } from "react";
 import Helppage from "./Helppage";
 import Latestproductcards from "./Latestproductcard";
 import Latestproducts from "./Latestproducts";
@@ -16,26 +15,28 @@ const products = [
   { name: "Accessories", image: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/store-card-13-accessories-nav-202409?wid=400&hei=260&fmt=png-alpha&.v=1723738892174" },
 ];
 
-const AppleProducts = () => {
-  return (
-    <div className="bg-gray-100 p-20">
-      <div className="flex justify-center space-x-8 bg-gray-100 py-7">
-        {products.map((product, index) => (
-          <div key={index} className="text-center">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-40 h-50 object-contain mx-auto"
-            />
-            <p className="mt-2 text-gray-900 text-sm font-medium">{product.name}</p>
-          </div>
-        ))}
+class AppleProducts extends Component {
+  render() {
+    return (
+      <div className="bg-gray-100 p-20">
+        <div className="flex justify-center space-x-8 bg-gray-100 py-7">
+          {products.map((product, index) => (
+            <div key={index} className="text-center">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-40 h-50 object-contain mx-auto"
+              />
+              <p className="mt-2 text-gray-900 text-sm font-medium">{product.name}</p>
+            </div>
+          ))}
+        </div>
+        <Latestproducts />
+        <Latestproductcards />
+        <Helppage />
       </div>
-      <Latestproducts />
-      <Latestproductcards/>
-      <Helppage/>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default AppleProducts;

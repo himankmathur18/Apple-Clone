@@ -9,7 +9,7 @@ class AirPodsCards extends Component {
         description: "The next evolution of sound and comfort.",
         price: "$129",
         feature: "With Active Noise Cancellation $179",
-        image: "https://example.com/airpods4.jpg", // Replace with actual image URL
+        image: "https://example.com/airpods4.jpg", 
         bgColor: "bg-gradient-to-r from-blue-900 to-orange-300",
       },
       {
@@ -18,7 +18,7 @@ class AirPodsCards extends Component {
         description: "The world's first all-in-one hearing health experience.",
         price: "$249",
         feature: "Features available with a free software update.",
-        image: "https://example.com/airpodspro2.jpg", // Replace with actual image URL
+        image: "https://example.com/airpodspro2.jpg", 
         bgColor: "bg-black",
       },
       {
@@ -26,7 +26,7 @@ class AirPodsCards extends Component {
         name: "AirPods Max",
         description: "Five fresh colors. Bold sound.",
         price: "$549",
-        image: "https://www.apple.com/v/airpods/x/images/overview/airpods_max_purple__d9y3g3n7cnyq_large_2x.png", // Replace with actual image URL
+        image: "https://www.apple.com/v/airpods/x/images/overview/airpods_max_purple__d9y3g3n7cnyq_large_2x.png", 
         bgColor: "bg-gray-100",
       },
     ],
@@ -51,11 +51,7 @@ class AirPodsCards extends Component {
                   <button className="bg-blue-600 text-white px-4 py-2 rounded-lg">Buy</button>
                 </div>
               </div>
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-64 md:w-80 rounded-lg"
-              />
+              <img src={product.image} alt={product.name} className="w-64 md:w-80 rounded-lg"/>
             </div>
           </div>
         ))}
